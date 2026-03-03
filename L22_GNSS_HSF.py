@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
 import re
-import pydeck as pdk
 from pyproj import Transformer
+from streamlit_folium import st_folium
+import folium
 
 # Configurazione Pagina
 st.set_page_config(page_title="L22 Height Scale Factor Tool", layout="wide")
@@ -127,3 +128,4 @@ if uploaded_file:
     )
     
     st.dataframe(df_final[cols].head())
+
